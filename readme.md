@@ -9,7 +9,6 @@
 ## 👥 Authors
 
 - **Name:** Miguel Cordeiro — nº 49765 — LEIM51N  
-- **Name:** Bruno Santos — nº 45096 — LEIM51N  
 - **Instructor:** Eng. Nuno Silva  
 
 ---
