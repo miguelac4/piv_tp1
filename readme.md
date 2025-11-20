@@ -55,7 +55,7 @@ In the first phase we explore the input images:
   <img src="media/img/analyses1.png" alt="Original image and RGB channel analysis" width="480">
 </p>
 
-> Original image + three small panels showing the R, G and B channels.
+> Original image + three small panels showing the R, G and B channels but in gray tones.
 
 <p align="center">
   <img src="media/img/analyses2.png" alt="RGB channel Histogram analysis" width="480">
