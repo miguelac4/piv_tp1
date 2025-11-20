@@ -30,4 +30,4 @@ Starting from raw images of LEGO pieces on a table, the system:
 All development and reporting are contained in the Jupyter Notebook:
 
 ```text
-notebooks/P1_51N_A49765_45096.ipynb
+src/P1_51N_A49765_45096.ipynb
