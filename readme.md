@@ -43,7 +43,7 @@ Below is a brief summary of each phase with example results.
 
 ---
 
-### 1️⃣ Image Analysis
+### 1️. Image Analysis
 
 In the first phase we explore the input images:
 
@@ -65,12 +65,12 @@ In the first phase we explore the input images:
 
 ---
 
-### 2️⃣ Binarization
+### 2️. Binarization
 
 Next, we convert the selected channel into a **binary mask** that separates LEGO pieces from the background:
 
-- Apply smoothing (e.g. Gaussian blur) to reduce noise.  
-- Threshold the image (global or adaptive threshold) to obtain a clean foreground.  
+- Apply smoothing (Gaussian blur) to reduce noise.  
+- Threshold the image (global threshold) to obtain a clean foreground.  
 - Choose parameters that best preserve LEGO shapes while removing background.  
 
 <p align="center">
@@ -81,7 +81,7 @@ Next, we convert the selected channel into a **binary mask** that separates LEGO
 
 ---
 
-### 3️⃣ Morphological Improvement
+### 3️. Morphological Improvement
 
 The raw binary image is then refined using **morphological operations**:
 
@@ -90,14 +90,20 @@ The raw binary image is then refined using **morphological operations**:
 - Smooth boundaries so that each LEGO piece becomes a solid, well-defined region.  
 
 <p align="center">
-  <img src="media/img/morphology.png" alt="Binary mask before and after morphological operations" width="480">
+  <img src="media/img/before_morphology.png" alt="Binary mask before morphological operations" width="480">
 </p>
 
-> Comparison before vs after morphology (erosion/dilation, opening/closing).
+> Image before morphology.
+
+<p align="center">
+  <img src="media/img/after_morphology.png" alt="Binary mask after morphological operations" width="480">
+</p>
+
+> Comparison after morphology (erosion/dilation, opening/closing).
 
 ---
 
-### 4️⃣ Connected Components Extraction
+### 4️. Connected Components Extraction
 
 With a clean binary mask, we identify each individual LEGO piece:
 
@@ -113,7 +119,7 @@ With a clean binary mask, we identify each individual LEGO piece:
 
 ---
 
-### 5️⃣ Feature Extraction
+### 5️. Feature Extraction
 
 For every connected component, we compute **features** used for classification:
 
@@ -129,7 +135,7 @@ For every connected component, we compute **features** used for classification:
 
 ---
 
-### 6️⃣ Object Classification
+### 6. Object Classification
 
 Finally, each component is mapped to a **LEGO class**:
 
@@ -143,7 +149,7 @@ Finally, each component is mapped to a **LEGO class**:
   <img src="media/img/classification.png" alt="Final classification result with labels for each LEGO piece" width="480">
 </p>
 
-> 💡 Binary image with bounding boxes and class labels on top of each LEGO brick.
+> Binary image with bounding boxes and class labels on top of each LEGO brick.
 
 ---
 
